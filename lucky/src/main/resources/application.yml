@@ -1,0 +1,23 @@
+server:
+  port: 9566
+spring:
+  mail:
+    host: smtp.163.com
+    username: itcode123@163.com  #发送邮箱
+    password: itcode123          #授权码
+    protocol: smtp               #协议
+    default-encoding: utf-8
+    port: 465
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: flase
+          auth: true              #需要验证登录名和密码
+          starttls:
+            enable: true          #需要TLS认证 保证发送邮件安全验证 QQ邮箱需要
+            required: true
+mymail:
+  receivename: sussenn@qq.com     #收件邮箱

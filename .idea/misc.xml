@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/kafkademo" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/idcardshow/pom.xml" />
+        <option value="$PROJECT_DIR$/sbquartz/pom.xml" />
+        <option value="$PROJECT_DIR$/weibojob/pom.xml" />
+        <option value="$PROJECT_DIR$/lucky/pom.xml" />
+        <option value="$PROJECT_DIR$/onlytest/pom.xml" />
+        <option value="$PROJECT_DIR$/blockchain/pom.xml" />
+        <option value="$PROJECT_DIR$/sha256encode/pom.xml" />
+        <option value="$PROJECT_DIR$/asyncthread/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisboot/pom.xml" />
+        <option value="$PROJECT_DIR$/oracleconne/pom.xml" />
+        <option value="$PROJECT_DIR$/resthttp/pom.xml" />
+        <option value="$PROJECT_DIR$/kafkademo/pom.xml" />
+        <option value="$PROJECT_DIR$/redispractice/pom.xml" />
+        <option value="$PROJECT_DIR$/niodemo/pom.xml" />
+        <option value="$PROJECT_DIR$/nettypro/pom.xml" />
+        <option value="$PROJECT_DIR$/java8/pom.xml" />
+        <option value="$PROJECT_DIR$/myjava8/pom.xml" />
+        <option value="$PROJECT_DIR$/configread/pom.xml" />
+        <option value="$PROJECT_DIR$/excepthandler/pom.xml" />
+        <option value="$PROJECT_DIR$/servletapi/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatispluscode/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

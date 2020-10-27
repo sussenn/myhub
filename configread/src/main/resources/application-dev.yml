@@ -1,0 +1,10 @@
+testpar:
+  wxparam:
+    appid: 123456
+    openid: abcdefg
+  alipay:
+    keys: 我的,你的,他的,她的,它的
+initpar:
+  wx:
+    appid: 99999
+    openid: aaaaa

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcodes.myhub.mybatisboot.dao.UserDao">
+
+    <!--根据uid查询user-->
+    <select id="findByUid" resultType="com.itcodes.myhub.mybatisboot.pojo.entity.User">
+        select * from uuser where uid = #{uid}
+    </select>
+
+    <!--新增用户-->
+    <insert id="addUser" parameterType="com.itcodes.myhub.mybatisboot.pojo.entity.User">
+        INSERT INTO uuser (uid,uname,sex,age,status,createtime) VALUES (#{uid},#{uname},#{sex},#{age},#{status},#{createtime})
+    </insert>
+
+    <!--批量新增用户  注意:foreach参数需要声明item类型-->
+    <insert id="addBatch">
+        INSERT INTO uuser (uid,uname,sex,age,status,createtime)
+        VALUES
+        <foreach collection="list" item="user" separator=",">
+            (#{user.uid},#{user.uname},#{user.sex},#{user.age},#{user.status},#{user.createtime})
+        </foreach>
+    </insert>
+
+    <!--批量更新-->
+    <update id="updStaBatch">
+        UPDATE uuser SET status = #{status} WHERE uid IN
+        <foreach collection="uids" item="uid" open="(" separator="," close=")">
+                #{uid}
+        </foreach>
+    </update>
+
+    <!--根据uid批量删除user   在Dao声明collection.否则必须写作list-->
+    <delete id="delBatchByUid">
+        DELETE FROM uuser WHERE uid IN
+        <foreach collection="uids" item="uid" open="(" separator="," close=")">
+            #{uid}
+        </foreach>
+    </delete>
+
+</mapper>

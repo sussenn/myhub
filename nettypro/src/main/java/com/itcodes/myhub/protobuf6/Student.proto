@@ -1,0 +1,8 @@
+syntax = "proto3";  //proto依赖版本号
+option java_outer_classname = "StudentPOJO";    //生成的外部类名. 文件名
+//使用message管理数据 会在StudentPOJO外部类生成一个内部类Student. 即发送数据时使用的对象
+message Student {
+    int32 id = 1;   //int id  (1表示序号,而不是值)
+    string name = 2;
+}
+//使用: 将该Student.proto文件放入protoc.exe所在路径. cmd输入 protoc.exe --java_out=. Student.proto

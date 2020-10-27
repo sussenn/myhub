@@ -1,0 +1,13 @@
+server:
+  port: 9600
+spring:
+  application:
+    name: mybatisboot #指定服务名
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatisboot?characterEncoding=UTF-8&serverTimezone=UTC #&allowMultiQueries=true#支持多重查询
+    username: root
+    password: 123456
+mybatis:              #mytis配置
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.itcodes.myhub.mybatisboot.pojo.entity

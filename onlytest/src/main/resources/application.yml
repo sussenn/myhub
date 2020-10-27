@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: onlytest
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    max-idle: 10
+    min-wait: 100000

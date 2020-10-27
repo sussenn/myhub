@@ -1,0 +1,28 @@
+syntax = "proto3";  //protobuf版本
+option optimize_for = SPEED;    //快速解析
+option java_package = "com.itcodes.myhub.protobuf7";    //指定生成在哪个包下
+option java_outer_classname = "MyDataInfo";    //生成的外部类名. 文件名
+//使用message管理多个message
+message MyMessage {
+    //定义枚举类型
+    enum DataType{
+        StudentType = 0;    //序号必须从0开始
+        WorkType = 1;
+    }
+    //使用data_type标识传递的数据是枚举里的哪个类型
+    DataType data_type = 1;
+    //表示整个MyMessage里只含有data_type和Student
+    //或者data_type和Worker
+    oneof dataBody {
+        Student student = 2;
+        Worker worker = 3;
+    }
+}
+message Student {
+    int32 id = 1;   //int id  (1表示序号,而不是值)
+    string name = 2;
+}
+message Worker {
+    string name = 1;
+    int32 age = 2;
+}

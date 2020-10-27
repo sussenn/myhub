@@ -1,0 +1,10 @@
+testpar:
+  wxparam:
+    appid: 567890
+    openid: qwert
+  alipay:
+    keys: 强,软,弱,虚
+initpar:
+  wx:
+    appid: 111111
+    openid: AAAAA

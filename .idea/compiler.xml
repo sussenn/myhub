@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="asyncthread" />
+        <module name="blockchain" />
+        <module name="configread" />
+        <module name="excepthandler" />
+        <module name="idcardshow" />
+        <module name="java8" />
+        <module name="kafkademo" />
+        <module name="lucky" />
+        <module name="mybatisboot" />
+        <module name="mybatispluscode" />
+        <module name="myjava8" />
+        <module name="nettypro" />
+        <module name="niodemo" />
+        <module name="onlytest" />
+        <module name="oracleconne" />
+        <module name="redispractice" />
+        <module name="resthttp" />
+        <module name="sbquartz" />
+        <module name="servletapi" />
+        <module name="sha256encode" />
+        <module name="weibojob" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="asyncthread" target="1.8" />
+      <module name="blockchain" target="1.8" />
+      <module name="configread" target="1.8" />
+      <module name="excepthandler" target="1.8" />
+      <module name="idcardshow" target="1.8" />
+      <module name="java8" target="1.8" />
+      <module name="kafkademo" target="1.8" />
+      <module name="lucky" target="1.8" />
+      <module name="mybatisboot" target="1.8" />
+      <module name="mybatispluscode" target="1.8" />
+      <module name="myjava8" target="1.8" />
+      <module name="nettypro" target="1.8" />
+      <module name="niodemo" target="1.8" />
+      <module name="onlytest" target="1.8" />
+      <module name="oracleconne" target="1.8" />
+      <module name="redispractice" target="1.8" />
+      <module name="resthttp" target="1.8" />
+      <module name="sbquartz" target="1.8" />
+      <module name="servletapi" target="1.8" />
+      <module name="sha256encode" target="1.8" />
+      <module name="weibojob" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="idcardshow" options="" />
+      <module name="lucky" options="" />
+      <module name="sbquartz" options="" />
+      <module name="weibojob" options="" />
+    </option>
+  </component>
+</project>

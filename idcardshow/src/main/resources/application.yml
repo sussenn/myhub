@@ -1,0 +1,26 @@
+server:
+  port: 9569
+spring:
+  application:
+    name: idcarddisplay #指定服务名
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_userinfo?serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    database: MySQL
+    show-sql: false
+    generate-ddl: false
+    open-in-view: false
+    hibernate: #设置JPA对数据库字段下划线的转译
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  redis:
+    host: 127.0.0.1
+    port: 6379
+jwt:
+  config:
+    key: sussen
+    ttl: 3600000 #1h过期 3600000
+    myHeader: SU-Token    #请求头key
