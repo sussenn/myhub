@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myhub?characterEncoding=UTF-8&serverTimezone=GMT%2B8 #&allowMultiQueries=true#支持多重查询
+    username: root
+    password: 123456
+  mail:
+    host: smtp.163.com
+    username: itcode123@163.com   #发送邮箱
+    password: RTJWLWKGQODYLTHL    #授权码
+    protocol: smtp                #协议
+    default-encoding: utf-8
+receiveEmail:
+  qq: sussenn@qq.com
+mybatis:                          #mytis配置
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.itcodes.myhub.emailaop.pojo

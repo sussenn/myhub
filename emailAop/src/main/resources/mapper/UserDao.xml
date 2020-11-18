@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcodes.myhub.emailaop.dao.UserDao">
+    <!--根据id查询-->
+    <select id="findById" resultType="com.itcodes.myhub.emailaop.pojo.User">
+        select * from user where id = #{id}
+    </select>
+
+</mapper>

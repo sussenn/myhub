@@ -1,0 +1,7 @@
+server:
+  port: 7111
+spring:
+  application:
+    name: email-aop
+  profiles:
+    active: dev
