@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcodes.myhub.syslog.dao.UserDao">
+
+    <select id="findById" resultType="com.itcodes.myhub.syslog.pojo.User">
+        select * from `user` where id = #{id}
+    </select>
+
+    <select id="findAll" resultType="com.itcodes.myhub.syslog.pojo.User">
+        select * from `user`
+    </select>
+
+    <!--批量新增-->
+    <insert id="addBatch" parameterType="java.util.List">
+        INSERT INTO `user` (id, name, password, sex)
+        VALUES
+        <foreach collection="list" item="user" separator=",">
+            (#{user.id}, #{user.name}, #{user.password}, #{user.sex})
+        </foreach>
+    </insert>
+
+    <!--批量更新 在Dao使用@Param声明collection-->
+    <update id="updateBatch" parameterType="java.util.List">
+        UPDATE user SET sex = #{sex} WHERE id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+
+</mapper>

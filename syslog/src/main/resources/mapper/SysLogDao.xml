@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itcodes.myhub.syslog.dao.SysLogDao">
+
+    <resultMap id="sysLogMap" type="com.itcodes.myhub.syslog.pojo.SysLogVo">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="method_name" jdbcType="VARCHAR" property="methodName" />
+        <result column="start_time" jdbcType="DATE" property="startTime" />
+        <result column="end_time" jdbcType="DATE" property="endTime" />
+    </resultMap>
+
+    <select id="findByName" resultMap="sysLogMap" >
+        select * from `sys_log` where method_name = #{methodName}
+    </select>
+
+    <select id="findById" resultMap="sysLogMap" >
+        select * from `sys_log` where id = #{id}
+    </select>
+
+    <!--使用主键自增-->
+    <insert id="addSysLog" parameterType="com.itcodes.myhub.syslog.pojo.SysLogVo" useGeneratedKeys="true" keyProperty="id">
+        insert into `sys_log` (title, method_name, start_time,end_time) values (#{title}, #{methodName}, #{startTime}, #{endTime})
+    </insert>
+
+</mapper>
