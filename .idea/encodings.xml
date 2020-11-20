@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/asyncthread" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/blockchain" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/configread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/emailAop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eventlisten" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/excepthandler" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/idcardshow" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafkademo" charset="UTF-8" />
@@ -14,10 +16,12 @@
     <file url="file://$PROJECT_DIR$/onlytest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oracleconne" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/redispractice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/redistemplatepractice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resthttp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sbquartz" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servletapi" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sha256encode" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/syslog" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/weibojob" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

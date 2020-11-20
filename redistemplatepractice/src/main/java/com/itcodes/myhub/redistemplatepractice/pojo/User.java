@@ -1,10 +1,7 @@
-package com.itcodes.myhub.redispractice.pojo;
+package com.itcodes.myhub.redistemplatepractice.pojo;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -13,13 +10,11 @@ import java.io.Serializable;
  * @Version 1.0
  * @Data 2020/3/19
  */
-@Entity
-@Table(name = "redis_user")
 @Data
-public class Users implements Serializable {
+@SuppressWarnings("serial")   //为被序列化类自动生成一个随机的序列化ID    抑制没有声明serialVersionUID变量警告
+public class User implements Serializable {
 
     private static final long serialVersionUID = 6356917046319791472L;
-    @Id
     private Long id;
     private String name;
     private String sex;

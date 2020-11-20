@@ -1,6 +1,7 @@
 package com.itcodes.myhub.onlytest.demo;
 
 import com.itcodes.myhub.onlytest.OnlytestApplication;
+import com.itcodes.myhub.onlytest.pojo.ShipCodeEnum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,21 @@ import java.util.Scanner;
 @SpringBootTest(classes = OnlytestApplication.class)
 @RunWith(value = SpringRunner.class)
 public class DemoTest {
+
+    @Test
+    public void test02() {
+        String adminName = "lixuanjun@xdf.cn";
+        String substring = adminName.substring(adminName.length() - 7);
+        System.err.println(substring);
+    }
+
+    @Test
+    public void test01() {
+        String phone = "18779816466";
+        String phoneSub = phone.substring(phone.length() - 4);
+        System.err.println(phoneSub);
+    }
+
     @Test
     public void test00() {
 

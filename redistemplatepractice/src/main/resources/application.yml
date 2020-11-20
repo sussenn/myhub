@@ -1,0 +1,9 @@
+server:
+  port: 7210
+  servlet:
+    context-path: /myhub
+spring:
+  application:
+    name: redisTemplate-practice #指定服务名
+  profiles:
+    active: dev

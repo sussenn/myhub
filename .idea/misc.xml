@@ -30,6 +30,10 @@
         <option value="$PROJECT_DIR$/excepthandler/pom.xml" />
         <option value="$PROJECT_DIR$/servletapi/pom.xml" />
         <option value="$PROJECT_DIR$/mybatispluscode/pom.xml" />
+        <option value="$PROJECT_DIR$/redistemplatepractice/pom.xml" />
+        <option value="$PROJECT_DIR$/emailAop/pom.xml" />
+        <option value="$PROJECT_DIR$/eventlisten/pom.xml" />
+        <option value="$PROJECT_DIR$/syslog/pom.xml" />
       </list>
     </option>
   </component>

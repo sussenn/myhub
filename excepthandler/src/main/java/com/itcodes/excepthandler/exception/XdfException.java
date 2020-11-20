@@ -1,12 +1,14 @@
 package com.itcodes.excepthandler.exception;
 
+import java.io.Serializable;
+
 /**
  * @ClassName XdfException  自定义异常
  * @Author sussenn
  * @Version 1.0.0
  * @Date 2020/7/1
  */
-public class XdfException extends RuntimeException {
+public class XdfException extends RuntimeException implements Serializable {
 
     private static final long serialVersionUID = 121994219683867566L;
     private Integer code = 20001;

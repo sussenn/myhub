@@ -23,7 +23,7 @@ public class UserServiceTest {
 
     @Test
     public void test00(){
-        Users user = userService.getUserBySid("905762");
+        Users user = userService.getUserBySid("1000");
         System.out.println(user);
     }
 
@@ -36,23 +36,31 @@ public class UserServiceTest {
 
     @Test
     public void test01(){
-        Users user = userService.getUserByPhone("13418892533");
+        Users user = userService.getUserByPhone("18888888888");
         String key = "redis:simple:" + user.getId();
         //time单位为 秒,不设置为 -1即永久
-        redisService.set(key,user,3600);
+        redisService.set(key,user,60);
         Long time = redisService.getExpire(key);
         System.err.println(time);
 
-        System.out.println(redisService.get(key));
+        System.err.println(redisService.get(key));
 
     }
 
     @Test
     public void test02(){
-        List<Users> users = userService.getUserByName("赵珺");
-        String key = "redis:list:all:helloworld";
+        List<Users> users = userService.getUserByName("萌萌菌");
+        String key = "redis:list:all:helloWorld";
         redisService.lPush(key,users);
         System.out.println(redisService.get(key));//无法找到key
         System.err.println(users);
+    }
+
+    @Test
+    public void test03() {
+        List<Users> user = userService.getUserByName("周大拿");
+        System.err.println(user);
+        Users phone = userService.getUserByPhone("18888888888");
+        System.err.println(phone);
     }
 }

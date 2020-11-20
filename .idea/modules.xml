@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/asyncthread/asyncthread.iml" filepath="$PROJECT_DIR$/asyncthread/asyncthread.iml" />
       <module fileurl="file://$PROJECT_DIR$/blockchain/blockchain.iml" filepath="$PROJECT_DIR$/blockchain/blockchain.iml" />
       <module fileurl="file://$PROJECT_DIR$/configread/configread.iml" filepath="$PROJECT_DIR$/configread/configread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emailAop/emailAop.iml" filepath="$PROJECT_DIR$/emailAop/emailAop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventlisten/eventlisten.iml" filepath="$PROJECT_DIR$/eventlisten/eventlisten.iml" />
       <module fileurl="file://$PROJECT_DIR$/excepthandler/excepthandler.iml" filepath="$PROJECT_DIR$/excepthandler/excepthandler.iml" />
       <module fileurl="file://$PROJECT_DIR$/idcardshow/idcardshow.iml" filepath="$PROJECT_DIR$/idcardshow/idcardshow.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafkademo/kafkademo.iml" filepath="$PROJECT_DIR$/kafkademo/kafkademo.iml" />
@@ -18,10 +20,12 @@
       <module fileurl="file://$PROJECT_DIR$/onlytest/onlytest.iml" filepath="$PROJECT_DIR$/onlytest/onlytest.iml" />
       <module fileurl="file://$PROJECT_DIR$/oracleconne/oracleconne.iml" filepath="$PROJECT_DIR$/oracleconne/oracleconne.iml" />
       <module fileurl="file://$PROJECT_DIR$/redispractice/redispractice.iml" filepath="$PROJECT_DIR$/redispractice/redispractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redistemplatepractice/redistemplatepractice.iml" filepath="$PROJECT_DIR$/redistemplatepractice/redistemplatepractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/resthttp/resthttp.iml" filepath="$PROJECT_DIR$/resthttp/resthttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/sbquartz/sbquartz.iml" filepath="$PROJECT_DIR$/sbquartz/sbquartz.iml" />
       <module fileurl="file://$PROJECT_DIR$/servletapi/servletapi.iml" filepath="$PROJECT_DIR$/servletapi/servletapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/sha256encode/sha256encode.iml" filepath="$PROJECT_DIR$/sha256encode/sha256encode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/syslog/syslog.iml" filepath="$PROJECT_DIR$/syslog/syslog.iml" />
       <module fileurl="file://$PROJECT_DIR$/weibojob/weibojob.iml" filepath="$PROJECT_DIR$/weibojob/weibojob.iml" />
     </modules>
   </component>

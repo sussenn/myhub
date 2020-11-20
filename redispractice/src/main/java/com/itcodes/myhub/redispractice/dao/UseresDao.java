@@ -11,7 +11,7 @@ import java.util.List;
  * @Version 1.0.0
  * @Date 2020/3/19
  */
-public interface UseresDao extends JpaRepository<Users, String>{
+public interface UseresDao extends JpaRepository<Users, Long>{
 
     List<Users> findByName(String name);
     Users findByPhone(String phone);

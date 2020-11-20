@@ -13,6 +13,7 @@ public class User implements Serializable {
 
     private String id;
     private String name;
+    private String password;
     private int sex;
 
     public String getId() {
@@ -31,6 +32,14 @@ public class User implements Serializable {
         this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public int getSex() {
         return sex;
     }
@@ -44,6 +53,7 @@ public class User implements Serializable {
         return "User{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
                 ", sex=" + sex +
                 '}';
     }

@@ -19,8 +19,8 @@ public class IPCheckUtil {
             InetSocketAddress proxyAddr = new InetSocketAddress(ip, port);
             Proxy proxy = new Proxy(Proxy.Type.HTTP, proxyAddr);
             connection = (HttpURLConnection) url.openConnection(proxy);
-            connection.setReadTimeerr(4000);
-            connection.setConnectTimeerr(4000);
+            //connection.setReadTimeerr(4000);
+            //connection.setConnectTimeerr(4000);
             connection.setRequestMethod("GET");
 
             if (connection.getResponseCode() == 200) {
