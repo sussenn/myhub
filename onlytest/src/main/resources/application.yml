@@ -10,3 +10,8 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     max-idle: 10
     min-wait: 100000
+ali:
+  ding:
+    robot:
+      webhoot: https://oapi.dingtalk.com/robot/send?access_token=b7eeea1755911910c8bd806d0177f03946c438ab4c29ee70b9ea3833125431c1
+      sysurl: https://www.baidu.com

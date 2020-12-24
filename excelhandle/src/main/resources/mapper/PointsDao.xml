@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itc.excel.dao.PointsDao">
+
+    <!--根据uid查询user-->
+    <select id="findByPoi" resultType="com.itc.excel.bean.Points">
+        SELECT cdkey, start_time, end_time, points FROM ser_points1_l WHERE points = #{points}
+    </select>
+
+</mapper>

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.itcodes</groupId>
-    <artifactId>onlytest</artifactId>
+    <groupId>com.itc</groupId>
+    <artifactId>excelhandle</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <parent>
@@ -16,8 +16,8 @@
     </parent>
 
     <packaging>jar</packaging>
-    <name>OnlyTest</name>
-    <description>测试专用</description>
+    <name>excel handler</name>
+    <description>excel 处理</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,10 +26,15 @@
     </properties>
 
     <dependencies>
+        <!--核心启动器 包含了自动配置,日志和YAML 不包括ObjectMapper-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -37,31 +42,32 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.5.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.3</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--定时任务多线程配置需要-->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.2</version>
+            <!--<version>2.1.0</version>-->
         </dependency>
-        <!--钉钉机器人-->
-        <dependency>
-            <groupId>com.xdf.dingtalk</groupId>
-            <artifactId>dingtalk-sdk</artifactId>
-            <version>2.0.1</version>
-        </dependency>
-        <!--<dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>27.0.1-jre</version>
-            <scope>compile</scope>
-        </dependency>-->
     </dependencies>
 
 </project>
