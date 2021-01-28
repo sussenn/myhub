@@ -9,15 +9,15 @@
 
     <!--新增用户-->
     <insert id="addUser" parameterType="com.itcodes.myhub.mybatisboot.pojo.entity.User">
-        INSERT INTO uuser (uid,uname,sex,age,status,createtime) VALUES (#{uid},#{uname},#{sex},#{age},#{status},#{createtime})
+        INSERT INTO uuser (uid,uname,sex,age,status,create_time) VALUES (#{uid},#{uname},#{sex},#{age},#{status},#{createTime})
     </insert>
 
     <!--批量新增用户  注意:foreach参数需要声明item类型-->
     <insert id="addBatch">
-        INSERT INTO uuser (uid,uname,sex,age,status,createtime)
+        INSERT INTO uuser (uid,uname,sex,age,status,create_time)
         VALUES
         <foreach collection="list" item="user" separator=",">
-            (#{user.uid},#{user.uname},#{user.sex},#{user.age},#{user.status},#{user.createtime})
+            (#{user.uid},#{user.uname},#{user.sex},#{user.age},#{user.status},#{user.createTime})
         </foreach>
     </insert>
 

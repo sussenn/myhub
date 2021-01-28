@@ -20,28 +20,34 @@ public class HuToolExcelServiceTest {
 
 
     @Test
-    public void test00() {
+    public void test002() {
         List<Points> points = service.findByPoi(5);
-        service.toWrite(points,"D:\\data\\points-l\\5积分.xlsx");
+        service.toWrite(points,"D:\\data\\points0122\\5积分.xlsx");
+    }
+
+    @Test
+    public void test00() {
+        List<Points> points = service.findByPoi(20);
+        service.toWrite(points,"D:\\data\\points0122\\20积分.xlsx");
     }
 
     @Test
     public void test001() {
         List<Points> points = service.findByPoi(10);
-        service.toWrite(points,"D:\\data\\points-l\\10积分.xlsx");
-    }
-
-    @Test
-    public void test002() {
-        List<Points> points = service.findByPoi(20);
-        service.toWrite(points,"D:\\data\\points-l\\20积分.xlsx");
+        service.toWrite(points,"D:\\data\\points0122\\10积分.xlsx");
     }
 
 
     @Test
     public void test003() {
         List<Points> points = service.findByPoi(50);
-        service.toWrite(points,"D:\\data\\points-l\\50积分.xlsx");
+        service.toWrite(points,"D:\\data\\points0122\\50积分.xlsx");
+    }
+
+    @Test
+    public void test004() {
+        List<Points> points = service.findByPoi(100);
+        service.toWrite(points,"D:\\data\\points3\\100积分.xlsx");
     }
 
     //@Test

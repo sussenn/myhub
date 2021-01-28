@@ -38,7 +38,7 @@ public class MybatisTest {
         user.setAge(28);
         user.setStatus("0");
         //String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-        user.setCreatetime(new Date());
+        user.setCreateTime(new Date());
 
         userDao.addUser(user);
     }
@@ -54,7 +54,7 @@ public class MybatisTest {
             user.setSex("女");
             user.setAge(i);
             user.setStatus("1");
-            user.setCreatetime(new Date());
+            user.setCreateTime(new Date());
             users.add(user);
         }
         userDao.addBatch(users);

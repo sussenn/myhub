@@ -1,4 +1,4 @@
-package cn.xdf.book.book.controller;
+package cn.xdf.seckill.seckill.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 意见表 前端控制器
+ *  前端控制器
  * </p>
  *
  * @author sussenn
- * @since 2020-09-24
+ * @since 2020-11-23
  */
 @RestController
-@RequestMapping("/book/bk-opinion")
-public class BkOpinionController {
+@RequestMapping("/seckill/tb-sec-kill-activity")
+public class TbSecKillActivityController {
 
 }
 

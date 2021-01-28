@@ -4,7 +4,7 @@
 
     <!--根据uid查询user-->
     <select id="findByPoi" resultType="com.itc.excel.bean.Points">
-        SELECT cdkey, start_time, end_time, points FROM ser_points1_l WHERE points = #{points}
+        SELECT id, cdkey, start_time, end_time, points FROM ser_points1_l3 WHERE points = #{points}
     </select>
 
 </mapper>
