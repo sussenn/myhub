@@ -2,6 +2,7 @@ package com.itcodes.myhub.syslog.service;
 
 import com.itcodes.myhub.syslog.annotation.SysLog;
 import com.itcodes.myhub.syslog.dao.UserDao;
+import com.itcodes.myhub.syslog.exception.XdfException;
 import com.itcodes.myhub.syslog.pojo.User;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,11 @@ public class UserService {
 
     @SysLog("根据用户id查询")
     public User findById(String id) {
+        try {
+            int i = 10 /0;
+        	} catch (Exception e) {
+        		throw new XdfException("这是啥");
+        	}
         return userDao.findById(id);
     }
 

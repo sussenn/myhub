@@ -18,13 +18,14 @@ public class SysLogVo implements Serializable {
     private int id;
     private String title;
     private String methodName;
+    private String des;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS", timezone = "GMT+8")
     private Date startTime;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS", timezone = "GMT+8")
     private Date endTime;
 
     public int getId() {
@@ -51,6 +52,14 @@ public class SysLogVo implements Serializable {
         this.methodName = methodName;
     }
 
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
     public Date getStartTime() {
         return startTime;
     }
@@ -73,6 +82,7 @@ public class SysLogVo implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", methodName='" + methodName + '\'' +
+                ", des='" + des + '\'' +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 '}';

@@ -20,7 +20,7 @@
 
     <!--使用主键自增-->
     <insert id="addSysLog" parameterType="com.itcodes.myhub.syslog.pojo.SysLogVo" useGeneratedKeys="true" keyProperty="id">
-        insert into `sys_log` (title, method_name, start_time,end_time) values (#{title}, #{methodName}, #{startTime}, #{endTime})
+        insert into `sys_log` (title, method_name, des, start_time, end_time) values (#{title}, #{methodName}, #{des}, #{startTime}, #{endTime})
     </insert>
 
 </mapper>

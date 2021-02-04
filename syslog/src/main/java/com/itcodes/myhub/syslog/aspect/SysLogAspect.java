@@ -14,6 +14,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -41,6 +42,8 @@ public class SysLogAspect {
         //方法名
         String methodName = pjp.getSignature().getName();
         String name = className + "." + methodName;
+        //请求参数
+        String arg = Arrays.toString(pjp.getArgs());
         //创建日志对象
         SysLogVo sysLogVo = new SysLogVo();
         //日志标题
@@ -52,6 +55,7 @@ public class SysLogAspect {
         //方法结束时间
         sysLogVo.setEndTime(new Date());
         sysLogVo.setMethodName(name);
+        sysLogVo.setDes(arg);
         //创建日志事件对象
         SysLogEvent sysLogEvent = new SysLogEvent(sysLogVo);
         //发布日志事件    [异步无效]

@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -50,7 +51,7 @@ public class SysLogVoDaoTest {
         for (int i = 2; i < 10; i++) {
             User user = new User();
             user.setId(String.valueOf(i));
-            user.setName("mark"+i);
+            user.setName("mark" + i);
             user.setPassword("xxx");
             user.setSex(1);
             list.add(user);
@@ -65,6 +66,30 @@ public class SysLogVoDaoTest {
         list.add("3");
         list.add("4");
 
-        userDao.updateBatch(0,list);
+        userDao.updateBatch(0, list);
+    }
+
+    @Test
+    public void test05() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        System.out.println("begin...");
+        String star_time = format.format(new Date());
+        System.err.println(star_time);
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("over...");
+        String end_time = format.format(new Date());
+        System.err.println(end_time);
+    }
+
+    @Test
+    public void test06() {
+        long time = new Date().getTime();
+
     }
 }

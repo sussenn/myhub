@@ -20,7 +20,7 @@ import java.util.List;
  * @Date 2020/11/19
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping(path = "/user", produces = "application/json")
 public class UserController {
 
     @Resource
