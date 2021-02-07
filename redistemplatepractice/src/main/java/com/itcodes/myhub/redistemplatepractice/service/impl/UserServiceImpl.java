@@ -3,7 +3,6 @@ package com.itcodes.myhub.redistemplatepractice.service.impl;
 import com.itcodes.myhub.redistemplatepractice.dao.UserDao;
 import com.itcodes.myhub.redistemplatepractice.pojo.User;
 import com.itcodes.myhub.redistemplatepractice.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +16,17 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private UserDao userDao;
+    private final UserDao userDao;
+
+    // 两种注入方式
+    //@Autowired
+    //public void setUserDao(UserDao userDao) {
+    //    this.userDao = userDao;
+    //}
+
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public User findById(Long id) {

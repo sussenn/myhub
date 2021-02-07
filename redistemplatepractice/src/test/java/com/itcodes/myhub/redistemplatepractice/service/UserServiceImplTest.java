@@ -124,4 +124,11 @@ public class UserServiceImplTest {
         redisTemplate.delete(keys);
     }
 
+    // 测试 Bean注入方式
+    @Test
+    public void test000() {
+        List<User> all = userService.findAll();
+        System.err.println(all);
+    }
+
 }
