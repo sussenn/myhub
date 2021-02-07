@@ -1,0 +1,10 @@
+server:
+  port: 8205
+spring:
+  application:
+    name: amqp-demo
+  profiles:
+    active: dev
+  # 允许同名Bean覆盖
+  main:
+    allow-bean-definition-overriding: true

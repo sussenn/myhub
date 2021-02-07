@@ -1,7 +1,6 @@
 package com.itcodes.myhub.syslog.aspect;
 
 import com.itcodes.myhub.syslog.annotation.SysLog;
-import com.itcodes.myhub.syslog.config.EventAsyncConfig;
 import com.itcodes.myhub.syslog.event.SysLogEvent;
 import com.itcodes.myhub.syslog.pojo.SysLogVo;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -10,7 +9,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

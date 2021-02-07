@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myhub?characterEncoding=UTF-8&serverTimezone=GMT%2B8 #&allowMultiQueries=true#支持多重查询
+    username: root
+    password: 123456
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    template:
+      exchange: itc.demoExchange
+      # 未指定queue路由key消费时, 则默认使用此路由key
+      routing-key: itc.demoMes
+      # 超时30s未接收到消息, 则放弃此次消费
+      receive-timeout: 10000
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.itc.amqp.pojo

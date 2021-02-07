@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myhub?characterEncoding=UTF-8&serverTimezone=GMT%2B8 #&allowMultiQueries=true#支持多重查询
+    username: root
+    password: 123456
+  rabbitmq:
+    host: localhost
+    # 注意不是15672
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    # 生产端
+    publisher-confirms: true  # 消息确认
+    publisher-returns: true
+    template:
+      mandatory: true
+      exchange: itc.demoExchange
+      # 未指定queue路由key消费时, 则默认使用此路由key
+      routing-key: itc.demoMes
+      # 超时120s未接收到消息, 则放弃此次消费
+      receive-timeout: 120000
+    # 消费端
+    listener:
+      simple:
+        # 初始连接数量
+        concurrency: 5
+        # 最大连接数量
+        max-concurrency: 10
+        # 限流
+        prefetch: 1
+        retry:
+          enabled: true # 是否开启消费者重试. false: 关闭重试, 发生异常会重复尝试接收消息
+          max-attempts: 5 # 最大重试次数
+          initial-interval: 5000 # 重试间隔时间
+          max-interval: 120000 # 重试最大时间间隔
+          multiplier: 5 # 应用于前一重试间隔的乘法器
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.itc.amqp.pojo
