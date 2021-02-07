@@ -14,7 +14,7 @@ import java.io.Serializable;
 @SuppressWarnings("serial")   //为被序列化类自动生成一个随机的序列化ID    抑制没有声明serialVersionUID变量警告
 public class User implements Serializable {
 
-    private static final long serialVersionUID = 6356917046319791472L;
+    //private static final long serialVersionUID = 6356917046319791472L;
     private Long id;
     private String name;
     private String sex;

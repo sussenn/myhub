@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <property name="server_name" value="redisTemplateTest" />
-    <property name="log_dir" value="/Logging/myHub" />
+    <property name="log_dir" value="/Logging/redisTemplateTest" />
     <property name="maxFileSize" value="50MB" />
     <property name="maxHistory" value="30" />
     <!-- 控制台输出 -->
