@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -101,7 +100,7 @@ public class UserServiceImplTest {
         Long len2 = redisTemplate.boundListOps("skuId3000").leftPush("4号");
         System.err.println(len2);
         // 右出-1
-        Object skuId =  redisTemplate.boundListOps("skuId3000").rightPop();
+        Object skuId = redisTemplate.boundListOps("skuId3000").rightPop();
         System.err.println(skuId);
     }
 
